@@ -1,38 +1,79 @@
-.App {
+.text {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App {
+  background-color: black;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+body {
+	font-family: "Montserrat", sans-serif;
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+  background-color: black; 
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+* {
+	font-family: "Montserrat", sans-serif !important;
+  box-sizing: content-box;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.outer-circle {
+  position: relative;
+  height: 200px;
+  width: 200px;
+  background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
+  border-radius: 50%;
+  animation: rotate 1.5s linear infinite;
+}
+
+.outer-circle span {
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
+  border-radius: 50%;
+}
+
+span:nth-child(1) {
+  filter: blur(5px);
+}
+
+span:nth-child(2) {
+  filter: blur(10px);
+}
+
+span:nth-child(3) {
+  filter: blur(25px);
+}
+
+span:nth-child(4) {
+  filter: blur(30px);
+}
+
+.inner-circle {
+  height: 180px;
+  width: 180px;
+  position: absolute;
+  background: black;
+  top: 10px;
+  left: 10px;
+  border-radius: 50%;
+  z-index: 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes rotate {
+  0% {
+    filter: hue-rotate(0deg);
   }
-  to {
-    transform: rotate(360deg);
+  100% {
+    filter: hue-rotate(360deg);
   }
 }
