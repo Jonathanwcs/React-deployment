@@ -16,7 +16,7 @@ function App() {
       <div class="text">
         <br/>
         <br/>
-        <p>In comming...</p>
+        <p>In coming...</p>
         <br/>
         <p>By Jonathan Orillard</p>
       </div>
